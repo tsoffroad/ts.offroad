@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tierra Salvaje Offroad | Alianza para Agencias</title>
-    <!-- Tailwind CSS para el diseño -->
+    <title>Tierra Salvaje Offroad | Propuesta Agentes Final</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js para las gráficas de rentabilidad -->
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
@@ -22,7 +22,7 @@
             -webkit-backdrop-filter: blur(10px);
         }
         .bg-hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1531303435785-3853ba035cda?auto=format&fit=crop&q=80&w=2000');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1531303435785-3853ba035cda?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
         }
@@ -41,7 +41,7 @@
             left: 0;
             z-index: 20;
         }
-        /* Colores de fondo para grupos en la tabla técnica */
+        /* Colores por columna de grupo */
         .group-x2 { background-color: #1f2937; } 
         .group-x3 { background-color: #374151; } 
         .group-x4 { background-color: #1f2937; } 
@@ -50,356 +50,276 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navegación Principal -->
+    <!-- Navegación -->
     <nav class="fixed w-full z-50 glass border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center">
-                    <!-- El archivo Logo.png debe estar en la misma carpeta en GitHub -->
-                    <img src="Logo.png" alt="Tierra Salvaje Logo" class="h-14 w-auto" onerror="this.src='https://via.placeholder.com/150x50?text=Tierra+Salvaje'">
+                    <span class="text-2xl font-black tracking-tighter text-gray-900">TIERRA SALVAJE</span>
                 </div>
-                <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-wider">
-                    <a href="#experiencia" class="hover:text-yellow-600 transition text-gray-800">Experiencia</a>
+                <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest">
                     <a href="#rentabilidad" class="hover:text-yellow-600 transition text-gray-800">Rentabilidad</a>
-                    <a href="#tarifas" class="hover:text-yellow-600 transition text-gray-800">Tarifas</a>
-                    <a href="#famtrip" class="bg-yellow-500 text-black px-5 py-2 rounded-full hover:bg-yellow-400 transition shadow-lg">Fam Trip</a>
+                    <a href="#tarifas" class="hover:text-yellow-600 transition text-gray-800">Tarifario</a>
+                    <a href="#famtrip" class="bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-400 transition shadow-lg">Fam Trip</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Sección Hero (Presentación Impactante) -->
-    <header class="relative min-h-screen flex items-center justify-center text-center text-white bg-hero pt-32 pb-20">
-        <div class="max-w-5xl px-6">
-            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
-                MÁS QUE UN TOUR,<br>
-                <span class="text-yellow-500">PURA ADRENALINA</span>
+    <!-- Hero -->
+    <header class="relative min-h-[80vh] flex items-center justify-center text-center text-white bg-hero pt-20">
+        <div class="max-w-4xl px-6">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-none">
+                ALIANZA<br><span class="text-yellow-500">ESTRATÉGICA</span>
             </h1>
-            
-            <p class="text-xl md:text-3xl mb-12 text-gray-200 max-w-3xl mx-auto font-light leading-relaxed">
-                Karts Offroad en el corazón de Venecia, Antioquia. Diseñamos experiencias de alto impacto para los clientes de tu agencia.
+            <p class="text-xl md:text-2xl mb-10 text-gray-300 font-light">
+                Propuesta comercial de experiencias Offroad para agencias de viajes. Venecia, Antioquia.
             </p>
-            
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="#tarifas" class="w-full md:w-auto bg-white text-black px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-2xl">
-                    Ver Portafolio Técnico
-                </a>
-                <a href="https://wa.me/573137985064" target="_blank" class="w-full md:w-auto bg-green-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-green-500 transition shadow-2xl flex items-center justify-center">
-                    Hablar con un Asesor
-                </a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#tarifas" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition">Explorar Tarifas</a>
+                <a href="https://wa.me/573137985064" class="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition">Contactar Operaciones</a>
             </div>
         </div>
     </header>
 
-    <!-- Contenedor Principal de Secciones -->
-    <main class="max-w-7xl mx-auto px-4 -mt-24 space-y-12 pb-24 relative z-10">
+    <main class="max-w-7xl mx-auto px-4 -mt-16 space-y-12 pb-24 relative z-10">
 
-        <!-- Sección Pilares de Experiencia -->
-        <section id="experiencia" class="bg-white rounded-2xl shadow-xl p-8">
-            <div class="mb-8 text-center md:text-left">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 border-l-4 border-yellow-500 pl-4 uppercase">Los 4 Pilares de la Experiencia</h2>
-                <p class="text-gray-600 text-lg">Inmersiones completas en el territorio antioqueño para una aventura memorable.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gray-50 rounded-xl p-6 border-t-4 border-red-500 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🏎️</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Adrenalina</h3>
-                    <p class="text-gray-600 text-sm">Velocidad controlada, lodo y terrenos irregulares guiados por expertos.</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 border-t-4 border-blue-500 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🧭</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Aventura</h3>
-                    <p class="text-gray-600 text-sm">Exploración de territorios veredales, placa huella y vías destapadas.</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 border-t-4 border-green-500 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">⛰️</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Paisajismo</h3>
-                    <p class="text-gray-600 text-sm">Vistas imponentes del Cerro Tusa, Cerro Bravo y observación de aves.</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-6 border-t-4 border-yellow-500 shadow-sm hover:shadow-md transition">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Impacto Social</h3>
-                    <p class="text-gray-600 text-sm">Conexión con actividades propias de cada vereda e integraciones locales.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rentabilidad Visual (Gráfica) -->
-        <section id="rentabilidad" class="bg-white rounded-2xl shadow-xl p-8">
+        <!-- Gráfico de Rentabilidad -->
+        <section id="rentabilidad" class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
             <div class="mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 border-l-4 border-yellow-500 pl-4 uppercase">Rentabilidad Proyectada (Pareja x2)</h2>
-                <p class="text-gray-600 text-lg">Visualización de márgenes de ganancia basados en el tarifario oficial.</p>
+                <h2 class="text-3xl font-black text-gray-900 mb-2 uppercase tracking-tight">Rentabilidad por Ruta</h2>
+                <p class="text-gray-500 text-lg">Margen de ganancia para la agencia basado en grupos de 2 personas (Precio Mínimo Sugerido).</p>
             </div>
             <div class="chart-container">
                 <canvas id="rentabilidadChart"></canvas>
             </div>
         </section>
 
-        <!-- Tabla de Tarifas Técnica Completa -->
-        <section id="tarifas" class="bg-white rounded-2xl shadow-xl p-8 overflow-hidden">
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-gray-800 border-l-4 border-yellow-500 pl-4 mb-2 uppercase">Matriz de Tarifas Integral</h2>
-                <p class="text-gray-600 italic text-sm">Escalabilidad de precios según tamaño de grupo (Valores en COP).</p>
+        <!-- Matriz de Tarifas Integral -->
+        <section id="tarifas" class="bg-white rounded-2xl shadow-xl p-8 overflow-hidden border border-gray-100">
+            <div class="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">Matriz de Tarifas 2024</h2>
+                    <p class="text-gray-500 italic">Precios expresados en COP. Incluye Costo Aliado y Precio sugerido al Cliente.</p>
+                </div>
+                <div class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg text-sm font-bold">
+                    Actualizado: Abril 2024
+                </div>
             </div>
 
             <div class="table-container bg-gray-900">
-                <table class="w-full text-left text-[9px] md:text-[11px] text-gray-300 border-collapse">
+                <table class="w-full text-left text-[10px] md:text-[11px] text-gray-300 border-collapse whitespace-nowrap">
                     <thead class="uppercase text-yellow-400">
                         <tr class="bg-gray-800">
-                            <th rowspan="2" class="px-3 py-4 sticky-col bg-gray-800 border-r border-gray-700 min-w-[140px] align-middle">Ruta</th>
-                            <th rowspan="2" class="px-2 py-4 border-r border-gray-700 align-middle text-center">TAct(h)</th>
-                            <th rowspan="2" class="px-2 py-4 border-r border-gray-700 align-middle">Terreno</th>
-                            <th colspan="3" class="px-2 py-2 text-center border-r border-gray-700 group-x2 border-b border-gray-600">Grupo x2</th>
-                            <th colspan="3" class="px-2 py-2 text-center border-r border-gray-700 group-x3 border-b border-gray-600">Grupo x3</th>
-                            <th colspan="3" class="px-2 py-2 text-center border-r border-gray-700 group-x4 border-b border-gray-600">Grupo x4</th>
+                            <th rowspan="2" class="px-4 py-4 sticky-col bg-gray-800 border-r border-gray-700 min-w-[180px]">Nombre de la Ruta</th>
+                            <th rowspan="2" class="px-2 py-4 border-r border-gray-700 text-center">Duración</th>
+                            <th colspan="3" class="px-2 py-2 text-center group-x2 border-b border-gray-600">Grupo x2 (Pareja)</th>
+                            <th colspan="3" class="px-2 py-2 text-center group-x3 border-b border-gray-600">Grupo x3</th>
+                            <th colspan="3" class="px-2 py-2 text-center group-x4 border-b border-gray-600">Grupo x4</th>
                             <th colspan="3" class="px-2 py-2 text-center group-x5 border-b border-gray-600">Grupo x5</th>
                         </tr>
                         <tr class="bg-gray-800">
-                            <th class="px-2 py-2 border-r border-gray-700 group-x2">Agencia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x2 text-white">Cliente</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x2 text-green-400">Ganancia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x3">Agencia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x3 text-white">Cliente</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x3 text-green-400">Ganancia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x4">Agencia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x4 text-white">Cliente</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x4 text-green-400">Ganancia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x5">Agencia</th>
-                            <th class="px-2 py-2 border-r border-gray-700 group-x5 text-white">Cliente</th>
-                            <th class="px-2 py-2 group-x5 text-green-400">Ganancia</th>
+                            <th class="px-2 py-2 group-x2 text-gray-300">Aliado</th>
+                            <th class="px-2 py-2 group-x2 text-white">Cliente</th>
+                            <th class="px-2 py-2 group-x2 text-green-400">Neto</th>
+                            <th class="px-2 py-2 group-x3 text-gray-300">Aliado</th>
+                            <th class="px-2 py-2 group-x3 text-white">Cliente</th>
+                            <th class="px-2 py-2 group-x3 text-green-400">Neto</th>
+                            <th class="px-2 py-2 group-x4 text-gray-300">Aliado</th>
+                            <th class="px-2 py-2 group-x4 text-white">Cliente</th>
+                            <th class="px-2 py-2 group-x4 text-green-400">Neto</th>
+                            <th class="px-2 py-2 group-x5 text-gray-300">Aliado</th>
+                            <th class="px-2 py-2 group-x5 text-white">Cliente</th>
+                            <th class="px-2 py-2 group-x5 text-green-400">Neto</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-700">
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Ruta especial (Pueblito)</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">0:20</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Normal</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$45.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$50.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$10.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$38.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$42.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$12.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$35.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$39.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$16.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$33.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$37.000</td><td class="px-2 py-3 text-green-400">$20.000</td>
+                        <!-- Ruta 1 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Ruta Especial (Pueblito)</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">0:20</td>
+                            <td class="px-2 py-4 group-x2">$45.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$55.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$10.000</td>
+                            <td class="px-2 py-4 group-x3">$38.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$50.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$12.000</td>
+                            <td class="px-2 py-4 group-x4">$35.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$51.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$16.000</td>
+                            <td class="px-2 py-4 group-x5">$33.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$53.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$20.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Ruta Vereda la rita</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">0:35</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Normal</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$47.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$52.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$10.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$41.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$46.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$15.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$37.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$41.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$16.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$35.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$39.000</td><td class="px-2 py-3 text-green-400">$20.000</td>
+                        <!-- Ruta 2 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">La Rita</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">0:35</td>
+                            <td class="px-2 py-4 group-x2">$47.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$57.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$10.000</td>
+                            <td class="px-2 py-4 group-x3">$40.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$53.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$13.000</td>
+                            <td class="px-2 py-4 group-x4">$37.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$54.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$17.000</td>
+                            <td class="px-2 py-4 group-x5">$35.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$56.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$21.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Palmichal</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">0:35</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Agresivo</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$62.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$69.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$14.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$56.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$62.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$18.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$51.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$57.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$24.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$48.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$53.000</td><td class="px-2 py-3 text-green-400">$25.000</td>
+                        <!-- Ruta 3 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Palmichal</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">0:35</td>
+                            <td class="px-2 py-4 group-x2">$62.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$76.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$14.000</td>
+                            <td class="px-2 py-4 group-x3">$55.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$72.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$17.000</td>
+                            <td class="px-2 py-4 group-x4">$50.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$72.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$22.000</td>
+                            <td class="px-2 py-4 group-x5">$48.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$75.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$27.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Fonda Amalia</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">1:00</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Pavimento</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$78.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$86.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$16.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$68.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$75.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$21.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$63.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$70.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$28.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$59.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$65.000</td><td class="px-2 py-3 text-green-400">$30.000</td>
+                        <!-- Ruta 4 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Finca Amalia</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">1:00</td>
+                            <td class="px-2 py-4 group-x2">$78.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$94.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$16.000</td>
+                            <td class="px-2 py-4 group-x3">$70.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$91.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$21.000</td>
+                            <td class="px-2 py-4 group-x4">$65.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$91.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$26.000</td>
+                            <td class="px-2 py-4 group-x5">$62.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$94.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$32.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Palenque</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">1:15</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Normal</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$102.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$113.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$22.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$88.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$97.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$27.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$82.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$91.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$36.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$77.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$85.000</td><td class="px-2 py-3 text-green-400">$40.000</td>
+                        <!-- Ruta 5 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Palenque</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">1:15</td>
+                            <td class="px-2 py-4 group-x2">$102.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$124.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$22.000</td>
+                            <td class="px-2 py-4 group-x3">$90.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$118.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$28.000</td>
+                            <td class="px-2 py-4 group-x4">$85.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$119.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$34.000</td>
+                            <td class="px-2 py-4 group-x5">$80.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$122.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$42.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">San Miguel</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">1:15</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Agresivo</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$140.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$154.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$28.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$122.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$135.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$39.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$113.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$125.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$48.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$108.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$119.000</td><td class="px-2 py-3 text-green-400">$55.000</td>
+                        <!-- Ruta 6 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">San Miguel</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">1:15</td>
+                            <td class="px-2 py-4 group-x2">$140.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$168.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$28.000</td>
+                            <td class="px-2 py-4 group-x3">$125.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$161.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$36.000</td>
+                            <td class="px-2 py-4 group-x4">$115.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$159.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$44.000</td>
+                            <td class="px-2 py-4 group-x5">$110.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$164.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$54.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Dia de sol Venecia</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">4:00</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Pavimento</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$186.986</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$206.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$38.029</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$159.227</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$176.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$50.319</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$145.848</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$161.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$60.608</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$137.020</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$151.000</td><td class="px-2 py-3 text-green-400">$69.898</td>
+                        <!-- Ruta 7 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Sol de Venecia</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">4:00</td>
+                            <td class="px-2 py-4 group-x2">$186.986</td><td class="px-2 py-4 group-x2 text-white font-bold">$225.015</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$38.029</td>
+                            <td class="px-2 py-4 group-x3">$165.111</td><td class="px-2 py-4 group-x3 text-white font-bold">$215.314</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$50.203</td>
+                            <td class="px-2 py-4 group-x4">$153.111</td><td class="px-2 py-4 group-x4 text-white font-bold">$215.486</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$62.375</td>
+                            <td class="px-2 py-4 group-x5">$146.666</td><td class="px-2 py-4 group-x5 text-white font-bold">$221.233</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$74.567</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Ruta abejas</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">2:40</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Pavimento</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$187.909</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$207.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$38.183</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$166.190</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$183.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$50.430</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$154.331</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$170.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$62.676</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$148.015</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$163.000</td><td class="px-2 py-3 text-green-400">$74.925</td>
+                        <!-- Ruta 8 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Ruta Abejas</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">2:40</td>
+                            <td class="px-2 py-4 group-x2">$187.909</td><td class="px-2 py-4 group-x2 text-white font-bold">$226.092</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$38.183</td>
+                            <td class="px-2 py-4 group-x3">$166.190</td><td class="px-2 py-4 group-x3 text-white font-bold">$216.620</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$50.430</td>
+                            <td class="px-2 py-4 group-x4">$154.331</td><td class="px-2 py-4 group-x4 text-white font-bold">$217.007</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$62.676</td>
+                            <td class="px-2 py-4 group-x5">$148.015</td><td class="px-2 py-4 group-x5 text-white font-bold">$222.940</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$74.925</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Base Cerro Tusa</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">2:45</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Pedregoso</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$261.869</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$289.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$54.263</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$225.923</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$249.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$69.231</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$206.950</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$228.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$84.200</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$195.967</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$216.000</td><td class="px-2 py-3 text-green-400">$100.166</td>
+                        <!-- Ruta 9 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Cerro Tusa (Caminata)</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">2:45</td>
+                            <td class="px-2 py-4 group-x2">$261.869</td><td class="px-2 py-4 group-x2 text-white font-bold">$316.132</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$54.263</td>
+                            <td class="px-2 py-4 group-x3">$234.332</td><td class="px-2 py-4 group-x3 text-white font-bold">$306.182</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$71.850</td>
+                            <td class="px-2 py-4 group-x4">$219.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$308.261</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$89.261</td>
+                            <td class="px-2 py-4 group-x5">$211.050</td><td class="px-2 py-4 group-x5 text-white font-bold">$317.750</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$106.700</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Dia de sol CTS</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">4:30</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Agresivo</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$300.631</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$331.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$60.738</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$259.414</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$286.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$79.758</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$238.806</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$263.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$96.776</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$226.841</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$250.000</td><td class="px-2 py-3 text-green-400">$115.797</td>
+                        <!-- Ruta 10 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Sol CTS</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">4:30</td>
+                            <td class="px-2 py-4 group-x2">$300.631</td><td class="px-2 py-4 group-x2 text-white font-bold">$361.369</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$60.738</td>
+                            <td class="px-2 py-4 group-x3">$269.111</td><td class="px-2 py-4 group-x3 text-white font-bold">$349.333</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$80.222</td>
+                            <td class="px-2 py-4 group-x4">$252.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$352.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$100.000</td>
+                            <td class="px-2 py-4 group-x5">$243.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$363.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$120.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Base Cerro Bravo</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">3:15</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Agresivo</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$393.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$433.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$80.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$340.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$374.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$102.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$314.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$346.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$128.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$298.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$328.000</td><td class="px-2 py-3 text-green-400">$150.000</td>
+                        <!-- Ruta 11 -->
+                        <tr class="hover:bg-gray-800 transition">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Cerro Bravo</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">3:15</td>
+                            <td class="px-2 py-4 group-x2">$393.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$473.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$80.000</td>
+                            <td class="px-2 py-4 group-x3">$353.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$458.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$105.000</td>
+                            <td class="px-2 py-4 group-x4">$333.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$463.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$130.000</td>
+                            <td class="px-2 py-4 group-x5">$321.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$476.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$155.000</td>
                         </tr>
-                        <tr class="hover:bg-gray-800">
-                            <td class="px-3 py-3 sticky-col bg-gray-900 font-bold border-r border-gray-700">Parapente</td>
-                            <td class="px-2 py-3 border-r border-gray-700 text-center">3:00</td>
-                            <td class="px-2 py-3 border-r border-gray-700">Agresivo</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$437.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$481.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$88.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$401.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$442.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$123.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$383.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$422.000</td><td class="px-2 py-3 border-r border-gray-700 text-green-400">$156.000</td>
-                            <td class="px-2 py-3 border-r border-gray-700">$372.000</td><td class="px-2 py-3 border-r border-gray-700 text-white font-bold">$410.000</td><td class="px-2 py-3 text-green-400">$190.000</td>
+                        <!-- Ruta 12 -->
+                        <tr class="hover:bg-gray-800 transition border-b-0">
+                            <td class="px-4 py-4 sticky-col bg-gray-900 font-bold border-r border-gray-700 text-white">Parapente</td>
+                            <td class="px-2 py-4 border-r border-gray-700 text-center">3:00</td>
+                            <td class="px-2 py-4 group-x2">$437.000</td><td class="px-2 py-4 group-x2 text-white font-bold">$525.000</td><td class="px-2 py-4 group-x2 text-green-400 font-bold">$88.000</td>
+                            <td class="px-2 py-4 group-x3">$395.000</td><td class="px-2 py-4 group-x3 text-white font-bold">$510.000</td><td class="px-2 py-4 group-x3 text-green-400 font-bold">$115.000</td>
+                            <td class="px-2 py-4 group-x4">$375.000</td><td class="px-2 py-4 group-x4 text-white font-bold">$515.000</td><td class="px-2 py-4 group-x4 text-green-400 font-bold">$140.000</td>
+                            <td class="px-2 py-4 group-x5">$365.000</td><td class="px-2 py-4 group-x5 text-white font-bold">$535.000</td><td class="px-2 py-4 group-x5 text-green-400 font-bold">$170.000</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- Visualización de Rutas (Gráfico) -->
-        <section id="rutas" class="bg-white rounded-2xl shadow-xl p-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-yellow-500 pl-4 uppercase">Rutas ordenadas por costo</h2>
-            <div class="space-y-8">
-                <div class="chart-container">
-                    <canvas id="duracionTerrenoChart"></canvas>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                    <div class="flex items-center space-x-2"><span class="w-4 h-4 rounded bg-emerald-500"></span><span class="text-xs font-bold uppercase text-gray-700">Terreno Normal</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-4 h-4 rounded bg-orange-500"></span><span class="text-xs font-bold uppercase text-gray-700">Terreno Agresivo</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-4 h-4 rounded bg-blue-500"></span><span class="text-xs font-bold uppercase text-gray-700">Pavimento / Placa</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-4 h-4 rounded bg-yellow-500"></span><span class="text-xs font-bold uppercase text-gray-700">Pedregoso / Vereda</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Fam Trip y Contacto -->
-        <section id="famtrip" class="bg-yellow-400 rounded-2xl shadow-2xl p-8 md:p-12 text-center space-y-8">
-            <h2 class="text-4xl font-black text-gray-900 uppercase tracking-tighter">¿QUIERES VIVIR ESTA EXPERIENCIA?</h2>
-            <p class="text-xl text-gray-800 max-w-2xl mx-auto font-medium">
-                ¡Invitamos a un representante de su agencia a un <strong>Fam Trip</strong> sin costo! Queremos que sientan la adrenalina y conozcan nuestra logística en primera persona.
+        <!-- Fam Trip & Contacto -->
+        <section id="famtrip" class="bg-yellow-400 rounded-3xl shadow-2xl p-10 md:p-16 text-center border-4 border-gray-900">
+            <h2 class="text-5xl font-black text-gray-900 mb-6 uppercase leading-none">ÚNETE A NUESTRA RED</h2>
+            <p class="text-2xl text-gray-800 max-w-2xl mx-auto font-medium mb-10">
+                Los aliados activos tienen acceso a <strong>Fam Trips trimestrales</strong> y material publicitario personalizado.
             </p>
-            
-            <div class="flex flex-col items-center space-y-6">
-                <div class="bg-white p-4 rounded-2xl shadow-lg inline-block border-4 border-gray-900">
-                    <!-- Código QR dinámico hacia WhatsApp -->
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/573137985064" alt="WhatsApp QR" class="w-32 h-32 md:w-40 md:h-40" />
-                    <p class="text-xs text-gray-500 mt-2 font-bold uppercase tracking-widest">Escanear para WhatsApp</p>
+            <div class="flex flex-col items-center gap-6">
+                <div class="bg-white p-5 rounded-3xl shadow-xl">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/573137985064" alt="WhatsApp QR" class="w-40 h-40" />
                 </div>
-            </div>
-
-            <div class="space-y-3 text-gray-900 font-bold border-t border-yellow-500/50 pt-8">
-                <div class="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base">
-                    <span class="flex items-center"><span class="mr-2 text-xl text-green-600">📞</span> 313 798 5064</span>
-                    <span class="flex items-center"><span class="mr-2 text-xl">📧</span> tierrasalvajeoffroad@gmail.com</span>
-                    <span class="flex items-center"><span class="mr-2 text-xl">📸</span> @ts.offroad</span>
+                <div class="space-y-2">
+                    <p class="text-gray-900 font-bold text-lg uppercase tracking-widest">Coordinación Comercial</p>
+                    <a href="https://wa.me/573137985064" class="text-gray-900 font-black text-4xl hover:opacity-75 transition">313 798 5064</a>
                 </div>
-                <div class="text-base italic">📍 Venecia, Antioquia</div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer con Logo -->
-    <footer class="bg-gray-900 text-white py-12 text-center">
+    <footer class="bg-gray-900 text-white py-16 text-center border-t-8 border-yellow-500">
         <div class="max-w-7xl mx-auto px-4">
-            <!-- Logo principal en el footer -->
-            <img src="Logo.png" alt="Tierra Salvaje Logo" class="h-28 mx-auto mb-6 transition hover:scale-105 duration-300" onerror="this.src='https://via.placeholder.com/200x80?text=Tierra+Salvaje'">
-            <div class="border-t border-gray-800 mt-6 pt-6">
-                <p class="text-gray-400 text-sm font-medium">© 2026 Tierra Salvaje Offroad</p>
-                <p class="text-gray-600 text-xs mt-2 uppercase tracking-widest">Operador Autorizado en el Suroeste Antioqueño | RNT 264204</p>
+            <h3 class="text-3xl font-black mb-6">TIERRA SALVAJE OFFROAD</h3>
+            <p class="text-gray-400 max-w-md mx-auto mb-8">Operador turístico especializado en experiencias de aventura de alto nivel en el Suroeste Antioqueño.</p>
+            <div class="flex justify-center gap-8 mb-10">
+                <a href="https://instagram.com/ts.offroad" class="hover:text-yellow-500 transition font-bold">@ts.offroad</a>
+                <span class="text-gray-700">|</span>
+                <span class="font-bold">RNT 264204</span>
             </div>
+            <p class="text-gray-600 text-xs">© 2024 Tierra Salvaje. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Lógica de Gráficos con Chart.js -->
     <script>
-        const shortLabels = ['Esp.', 'Rita', 'Palm.', 'Amal.', 'Palen.', 'S.Mig.', 'Sol Ven.', 'Abej.', 'Tusa', 'Sol CTS', 'Bravo', 'Para.'];
-        const fullLabels = [
-            'Ruta Especial', 'Ruta La Rita', 'Palmichal', 'Fonda Amalia', 'Palenque', 
-            'San Miguel', 'Día de Sol Venecia', 'Ruta Abejas', 'Base Cerro Tusa', 
-            'Día de Sol CTS', 'Base Cerro Bravo', 'Parapente'
-        ];
-
-        // Inicialización Gráfica de Rentabilidad
-        new Chart(document.getElementById('rentabilidadChart'), {
-            type: 'bar',
-            data: {
-                labels: shortLabels,
-                datasets: [
-                    { label: 'Costo Agencia', data: [45000, 47000, 62000, 78000, 102000, 140000, 186986, 187909, 261869, 300631, 393000, 437000], backgroundColor: '#1F2937' },
-                    { label: 'Ganancia Agencia', data: [10000, 10000, 14000, 16000, 22000, 28000, 38029, 38183, 54263, 60738, 80000, 88000], backgroundColor: '#EAB308' }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: { 
-                    x: { stacked: true, grid: { display: false } }, 
-                    y: { stacked: true, beginAtZero: true } 
+        const shortLabels = ['Esp.', 'Rita', 'Palm.', 'Amalia', 'Palen.', 'S.Mig.', 'Sol V.', 'Abejas', 'Tusa', 'Sol CTS', 'Bravo', 'Parap.'];
+        
+        function initCharts() {
+            const ctx = document.getElementById('rentabilidadChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: shortLabels,
+                    datasets: [
+                        { 
+                            label: 'Costo Aliado', 
+                            data: [45000, 47000, 62000, 78000, 102000, 140000, 186986, 187909, 261869, 300631, 393000, 437000], 
+                            backgroundColor: '#1F2937' 
+                        },
+                        { 
+                            label: 'Ganancia Agencia', 
+                            data: [10000, 10000, 14000, 16000, 22000, 28000, 38029, 38183, 54263, 60738, 80000, 88000], 
+                            backgroundColor: '#EAB308' 
+                        }
+                    ]
                 },
-                plugins: { legend: { position: 'bottom' } }
-            }
-        });
-
-        // Inicialización Gráfica de Duración/Terreno
-        new Chart(document.getElementById('duracionTerrenoChart'), {
-            type: 'bar',
-            data: {
-                labels: fullLabels,
-                datasets: [{
-                    label: 'Tiempo Actividad (Minutos)',
-                    data: [20, 35, 35, 60, 75, 75, 240, 160, 165, 270, 195, 180],
-                    backgroundColor: [
-                        '#10B981', '#10B981', '#F97316', '#3B82F6', 
-                        '#10B981', '#F97316', '#3B82F6', '#3B82F6', 
-                        '#EAB308', '#F97316', '#F97316', '#F97316'
-                    ],
-                    borderRadius: 5
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { 
-                    legend: { display: false },
-                    tooltip: { callbacks: { label: (ctx) => `Duración aprox: ${ctx.raw} min` } }
-                },
-                scales: { 
-                    x: { beginAtZero: true, grid: { color: '#E5E7EB' } },
-                    y: { grid: { display: false } }
+                options: { 
+                    responsive: true, 
+                    maintainAspectRatio: false, 
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    },
+                    scales: { 
+                        x: { stacked: true }, 
+                        y: { 
+                            stacked: true, 
+                            beginAtZero: true, 
+                            ticks: { callback: v => '$' + v.toLocaleString() } 
+                        } 
+                    } 
                 }
-            }
-        });
+            });
+        }
+
+        window.onload = initCharts;
     </script>
 </body>
 </html>
